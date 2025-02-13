@@ -30,6 +30,9 @@ nav a {
   font-size: 16px;
   align-items: flex-end;
 }
+nav a:hover {
+  color: #005F73;
+}
 
 .hero-text h1 {
   font-size: 64px;
@@ -60,11 +63,11 @@ nav a {
 .hero-image {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* Moves the image to the right */
+  justify-content: flex-end;
   position: absolute;
   right: 5%;
   bottom: 0;
-  z-index: 3; /* Ensures the image is above both backgrounds */
+  z-index: 3; 
 }
 
 .hero-image img {
@@ -94,7 +97,6 @@ button {
   cursor: pointer;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
   .hero {
       flex-direction: column;
