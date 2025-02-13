@@ -60,11 +60,11 @@ nav a {
 .hero-image {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* Moves the image to the right */
+  justify-content: flex-end; 
   position: absolute;
   right: 5%;
   bottom: 0;
-  z-index: 3; /* Ensures the image is above both backgrounds */
+  z-index: 3; 
 }
 
 .hero-image img {
