@@ -94,7 +94,7 @@ button {
   cursor: pointer;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1024px) {
   .hero {
       flex-direction: column;
