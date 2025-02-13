@@ -63,7 +63,11 @@ nav a:hover {
 .hero-image {
   flex: 1;
   display: flex;
+<<<<<<< HEAD
   justify-content: flex-end;
+=======
+  justify-content: flex-end; 
+>>>>>>> 78cfefb1e90eb39be21df0d3fce99b239de7eb27
   position: absolute;
   right: 5%;
   bottom: 0;
@@ -97,6 +101,10 @@ button {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 78cfefb1e90eb39be21df0d3fce99b239de7eb27
 @media (max-width: 1024px) {
   .hero {
       flex-direction: column;
