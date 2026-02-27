@@ -9,6 +9,47 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("4SsVt63njqlm3srW2");
+  })();
+
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_60x2ut9", "template_y8n09vl", this)
+      .then(function () {
+        alert("Message sent successfully!");
+      }, function (error) {
+        alert("Failed to send message. Try again.");
+      });
+
+    this.reset();
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("YOUR_PUBLIC_KEY"); // replace
+  })();
+
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      .then(function () {
+        alert("Message sent successfully!");
+      }, function (error) {
+        alert("Failed to send message. Try again.");
+      });
+
+    this.reset();
+  });
+</script>
+
 <body>
 
   <header class="header">
@@ -27,8 +68,17 @@
         <h1 class="animate-stagger" style="--delay: 0.1s">Swornika Maharjan</h1>
         <h2 class="subtitle animate-stagger" style="--delay: 0.3s">Flutter Developer</h2>
         <p class="hero-desc animate-stagger" style="--delay: 0.5s">
-          Creating beautiful, fast and user-friendly mobile & web experiences
+          Delivering engaging, responsive, and performance-driven mobile applications
         </p>
+
+        <p class="current-role" style="font-size: 1.3rem; font-weight: 600; color: #c084fc; margin-bottom: 1.5rem;">
+          Currently working as Flutter Developer at
+          <a href="https://dallotech.com/" target="_blank" rel="noopener noreferrer"
+            style="color: #a78bfa; text-decoration: underline;">
+            Dallo Tech Pvt. Ltd.
+          </a>
+        </p>
+
         <div class="hero-cta animate-stagger" style="--delay: 0.7s">
           <a href="https://github.com/swornika-maharjan/Portfolio/blob/main/resume.pdf" download
             class="btn primary">Download CV</a>
@@ -38,7 +88,7 @@
 
       <div class="hero-image-wrapper animate-on-scroll">
         <div class="hero-image floating-image">
-          <img src="photo.jpg" alt="Swornika Maharjan" />
+          <img src="image.png" alt="Swornika Maharjan" />
         </div>
       </div>
     </div>
@@ -50,30 +100,76 @@
         <h2>About Me</h2>
         <p>
           I’m a dedicated Flutter developer with a strong interest in crafting seamless
-          mobile and web applications. My focus is on writing clean, maintainable code
+          mobile applications. My focus is on writing clean, maintainable code
           and designing intuitive user interfaces.
         </p>
         <p>
-          I love solving real-world problems through technology and continuously
+          I am a quick learner with a strong foundation in computer science fundamentals.
+          I am passionate about building high-quality software and continuously
           expanding my knowledge in modern development practices.
         </p>
 
-        <div class="about-info">
-          <div><strong>Location:</strong> Kathmandu, Nepal</div>
+        <div class="about-info" style="margin: 2.5rem 0;">
+          <div><strong>Location:</strong> Manamaiju, Kathmandu, Nepal</div>
+          <div><strong>Phone:</strong> +977 9860560525</div>
           <div><strong>Email:</strong> swornikamhrjn@gmail.com</div>
+        </div>
+
+        <!-- Education – moved to left column -->
+        <div class="education-section" style="margin-top: 3.5rem;">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <div class="edu-degree">BSc. CSIT</div>
+            <div class="edu-institution">Asian College of Higher Studies</div>
+            <div class="edu-location">Ekantakuna, Lalitpur</div>
+            <div class="edu-year">Completed</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">+2 Science</div>
+            <div class="edu-institution">Kathmandu Model College</div>
+            <div class="edu-location">Bagbazaar, Kathmandu</div>
+            <div class="edu-year">Completed</div>
+          </div>
         </div>
       </div>
 
       <div class="about-right">
         <h3>Core Skills</h3>
-        <div class="skills">
-          <span class="skill-tag" style="--delay: 0.1s">Flutter</span>
-          <span class="skill-tag" style="--delay: 0.2s">Dart</span>
-          <span class="skill-tag" style="--delay: 0.3s">Python</span>
-          <span class="skill-tag" style="--delay: 0.4s">JavaScript</span>
-          <span class="skill-tag" style="--delay: 0.5s">HTML</span>
-          <span class="skill-tag" style="--delay: 0.6s">CSS</span>
-          <span class="skill-tag" style="--delay: 0.7s">Figma</span>
+        <div class="skills-list">
+          <div class="skill-row">
+            <div class="skill-name">Flutter</div>
+            <div class="skill-desc">Cross-platform mobile app development (primary expertise)</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-name">Dart</div>
+            <div class="skill-desc">Language used for Flutter development</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-name">HTML & CSS</div>
+            <div class="skill-desc">Responsive web design and UI styling</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-name">Figma</div>
+            <div class="skill-desc">UI/UX design and prototyping</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-name">Trello</div>
+            <div class="skill-desc">Project management and task tracking</div>
+          </div>
+        </div>
+
+        <!-- Certifications – moved to right column -->
+        <div class="certifications-section" style="margin-top: 3.5rem;">
+          <h3>Certifications</h3>
+          <div class="cert-item">
+            <div class="cert-title">Web Designing Course</div>
+            <div class="cert-institution">APTECH Information Technology</div>
+            <div class="cert-location">Kathmandu</div>
+            <div class="cert-year">2018</div>
+            <div class="cert-description">
+              Completed a 3-month course from 10th April 2018 to 11th July 2018.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -101,6 +197,16 @@
       </div>
 
       <div class="project-card animate-stagger" style="--delay: 0.4s">
+        <h3>Samiksha Publication</h3>
+        <p>Mobile application for publishing, sales and distribution of Medical, Nursing, Health Sciences and Technology
+          books and learning resources.</p>
+        <div class="project-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.samiksha.ecommerce&hl=en" target="_blank"
+            rel="noopener noreferrer">Play Store</a>
+        </div>
+      </div>
+
+      <div class="project-card animate-stagger" style="--delay: 0.55s">
         <h3>React Showcase</h3>
         <p>Responsive React web project with modern components and routing.</p>
         <div class="project-buttons">
@@ -138,9 +244,9 @@
 
       <div class="contact-right">
         <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <input type="text" name="user_name" placeholder="Your Name" required>
+          <input type="email" name="user_email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>
@@ -149,7 +255,7 @@
 
   <script>
     // Scroll reveal animations
-    const revealElements = document.querySelectorAll('.animate-on-scroll, .animate-stagger, .skill-tag');
+    const revealElements = document.querySelectorAll('.animate-on-scroll, .animate-stagger');
 
     const reveal = () => {
       revealElements.forEach(el => {
