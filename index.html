@@ -9,46 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-  (function () {
-    emailjs.init("4SsVt63njqlm3srW2");
-  })();
-
-  document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    emailjs.sendForm("service_60x2ut9", "template_y8n09vl", this)
-      .then(function () {
-        alert("Message sent successfully!");
-      }, function (error) {
-        alert("Failed to send message. Try again.");
-      });
-
-    this.reset();
-  });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-  (function () {
-    emailjs.init("YOUR_PUBLIC_KEY"); // replace
-  })();
-
-  document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-      .then(function () {
-        alert("Message sent successfully!");
-      }, function (error) {
-        alert("Failed to send message. Try again.");
-      });
-
-    this.reset();
-  });
-</script>
 
 <body>
 
@@ -252,6 +213,27 @@
       </div>
     </div>
   </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    (function () {
+      emailjs.init("4SsVt63njqlm3srW2");
+    })();
+
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_60x2ut9", "template_y8n09vl", this)
+        .then(function () {
+          alert("Message sent successfully!");
+        }, function (error) {
+          alert("Failed to send message. Try again.");
+        });
+
+      this.reset();
+    });
+  </script>
 
   <script>
     // Scroll reveal animations
