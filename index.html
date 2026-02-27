@@ -1,34 +1,178 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>MYPortfolio</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <div class="logo">PORTFOLIO</div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="project.html">Projects</a>
-        <a href="contacts.html">Contacts</a>
-        <a href="about.html">About me</a>
-      </nav>
-      <div class="toggle-switch"></div>
-    </header>
+<html lang="en">
 
-    <main class="hero">
-      <div class="hero-text">
-        <h1><span>Hello, </span> </h1>
-        <p>I am Swornika Maharjan, a developer passionate about building apps and websites!</p><br><br><br><br>
-        <a href="https://github.com/swornika-maharjan/Portfolio/blob/main/resume.pdf" download>
-            <button>Download CV</button>
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swornika Maharjan - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">PORTFOLIO</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contacts">Contact</a>
+    </nav>
+  </header>
+
+  <main class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text animate-on-scroll">
+        <h1 class="animate-stagger" style="--delay: 0.1s">Swornika Maharjan</h1>
+        <h2 class="subtitle animate-stagger" style="--delay: 0.3s">Flutter Developer</h2>
+        <p class="hero-desc animate-stagger" style="--delay: 0.5s">
+          Creating beautiful, fast and user-friendly mobile & web experiences
+        </p>
+        <div class="hero-cta animate-stagger" style="--delay: 0.7s">
+          <a href="https://github.com/swornika-maharjan/Portfolio/blob/main/resume.pdf" download
+            class="btn primary">Download CV</a>
+          <a href="#contacts" class="btn outline">Let's talk</a>
+        </div>
       </div>
-      <div class="hero-image">
-        <img src="photo.jpg" alt="Swornika Maharjan">
+
+      <div class="hero-image-wrapper animate-on-scroll">
+        <div class="hero-image floating-image">
+          <img src="photo.jpg" alt="Swornika Maharjan" />
+        </div>
       </div>
     </div>
-    <div class="split-bg"></div>
-    </main>
-  </body>
+  </main>
+
+  <section id="about" class="about-section animate-on-scroll">
+    <div class="about-wrapper">
+      <div class="about-left">
+        <h2>About Me</h2>
+        <p>
+          I’m a dedicated Flutter developer with a strong interest in crafting seamless
+          mobile and web applications. My focus is on writing clean, maintainable code
+          and designing intuitive user interfaces.
+        </p>
+        <p>
+          I love solving real-world problems through technology and continuously
+          expanding my knowledge in modern development practices.
+        </p>
+
+        <div class="about-info">
+          <div><strong>Location:</strong> Kathmandu, Nepal</div>
+          <div><strong>Email:</strong> swornikamhrjn@gmail.com</div>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <h3>Core Skills</h3>
+        <div class="skills">
+          <span class="skill-tag" style="--delay: 0.1s">Flutter</span>
+          <span class="skill-tag" style="--delay: 0.2s">Dart</span>
+          <span class="skill-tag" style="--delay: 0.3s">Python</span>
+          <span class="skill-tag" style="--delay: 0.4s">JavaScript</span>
+          <span class="skill-tag" style="--delay: 0.5s">HTML</span>
+          <span class="skill-tag" style="--delay: 0.6s">CSS</span>
+          <span class="skill-tag" style="--delay: 0.7s">Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section animate-on-scroll">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-container">
+      <div class="project-card animate-stagger" style="--delay: 0.1s">
+        <h3>Ecommerce Website</h3>
+        <p>Online electronics store with product listings, cart and checkout flow.</p>
+        <div class="project-buttons">
+          <a href="https://onlineelectronics.infinityfreeapp.com/?i=1" target="_blank" rel="noopener noreferrer">Live
+            Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card animate-stagger" style="--delay: 0.25s">
+        <h3>Muse Vibe</h3>
+        <p>Music-focused mobile application built with Flutter.</p>
+        <div class="project-buttons">
+          <a href="https://github.com/swornika-maharjan/muse-vibe" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card animate-stagger" style="--delay: 0.4s">
+        <h3>React Showcase</h3>
+        <p>Responsive React web project with modern components and routing.</p>
+        <div class="project-buttons">
+          <a href="https://github.com/swornika-maharjan/reactproject/tree/main/src/projects" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="contact-section animate-on-scroll">
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <h2>Let's Work Together</h2>
+        <p>
+          I'm always open to discussing new projects, creative ideas,<br>
+          or opportunities to collaborate. Feel free to reach out!
+        </p>
+
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> swornikamhrjn@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +977 9860560525</p>
+          <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/swornika-maharjan" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll reveal animations
+    const revealElements = document.querySelectorAll('.animate-on-scroll, .animate-stagger, .skill-tag');
+
+    const reveal = () => {
+      revealElements.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 140;
+
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', reveal);
+    reveal(); // run once on load
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 80);
+    });
+  </script>
+
+</body>
+
 </html>
