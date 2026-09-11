@@ -446,15 +446,6 @@ nav a.active {
   color: var(--purple-dark);
 }
 
-/* Typewriter cursor */
-.typewriter {
-  color: var(--purple-light);
-  border-right: 2px solid var(--purple-light);
-  padding-right: 4px;
-  animation: blink 1s infinite;
-  white-space: nowrap;
-  overflow: hidden;
-}
 
 .hero-desc {
   font-size: 1.15rem;
