@@ -4,131 +4,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swornika Maharjan - Portfolio</title>
+  <title>Swornika Maharjan — Flutter Developer</title>
+  <meta name="description"
+    content="Swornika Maharjan is a Flutter Developer at Dallo Tech Pvt. Ltd., specializing in cross-platform mobile apps, clean UI/UX, and performance-driven engineering." />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 </head>
-
-
 
 <body>
 
-  <header class="header">
-    <div class="logo">PORTFOLIO</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contacts">Contact</a>
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Background Orbs -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="site-header">
+    <div class="logo">SM</div>
+
+    <nav id="main-nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contacts" class="nav-link">Contact</a>
     </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
+  <!-- ===================== HERO ===================== -->
   <main class="hero" id="home">
     <div class="hero-content">
-      <div class="hero-text animate-on-scroll">
-        <h1 class="animate-stagger" style="--delay: 0.1s">Swornika Maharjan</h1>
-        <h2 class="subtitle animate-stagger" style="--delay: 0.3s">Flutter Developer</h2>
-        <p class="hero-desc animate-stagger" style="--delay: 0.5s">
-          Delivering engaging, responsive, and performance-driven mobile applications
+      <div class="hero-text">
+        <div class="hero-badge animate-stagger" style="--delay: 0.05s">
+          <span class="dot"></span>
+          Available for opportunities
+        </div>
+
+        <h1 class="animate-stagger" style="--delay: 0.15s">Swornika<br />Maharjan</h1>
+
+        <div class="subtitle-wrapper animate-stagger" style="--delay: 0.3s">
+          <p class="subtitle">
+            <i class="fa-solid fa-mobile-screen-button" style="font-size:1.3rem; color: #a78bfa;"></i>
+            <span id="typewriter" class="typewriter">Flutter Developer</span>
+          </p>
+        </div>
+
+        <p class="hero-desc animate-stagger" style="--delay: 0.45s">
+          Crafting engaging, responsive, and performance-driven mobile experiences — one pixel at a time.
         </p>
 
-        <p class="current-role" style="font-size: 1.3rem; font-weight: 600; color: #c084fc; margin-bottom: 1.5rem;">
-          Currently working as Flutter Developer at
-          <a href="https://dallotech.com/" target="_blank" rel="noopener noreferrer"
-            style="color: #a78bfa; text-decoration: underline;">
-            Dallo Tech Pvt. Ltd.
+        <div class="current-role animate-stagger" style="--delay: 0.6s">
+          <i class="fa-solid fa-briefcase role-icon"></i>
+          Currently at&nbsp;
+          <a href="https://dallotech.com/" target="_blank" rel="noopener noreferrer">Dallo Tech Pvt. Ltd.</a>
+        </div>
+
+        <div class="hero-cta animate-stagger" style="--delay: 0.75s">
+          <a href="https://github.com/swornika-maharjan/Portfolio/blob/main/resume.pdf" target="_blank"
+            class="btn primary" id="btn-download-cv">
+            <i class="fa-solid fa-download"></i> Download CV
           </a>
-        </p>
-
-        <div class="hero-cta animate-stagger" style="--delay: 0.7s">
-          <a href="https://github.com/swornika-maharjan/Portfolio/blob/main/resume.pdf" download
-            class="btn primary">Download CV</a>
-          <a href="#contacts" class="btn outline">Let's talk</a>
+          <a href="#contacts" class="btn outline" id="btn-lets-talk">
+            <i class="fa-solid fa-comment-dots"></i> Let's Talk
+          </a>
         </div>
       </div>
 
-      <div class="hero-image-wrapper animate-on-scroll">
-        <div class="hero-image floating-image">
-          <img src="image.png" alt="Swornika Maharjan" />
+      <div class="hero-image-wrapper animate-stagger" style="--delay: 0.2s">
+        <div class="floating-image">
+          <img src="photo.jpg" alt="Swornika Maharjan — Flutter Developer" />
         </div>
       </div>
     </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="mouse"></div>
+      <span>Scroll</span>
+    </div>
   </main>
 
-  <section id="about" class="about-section animate-on-scroll">
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about-section">
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">Who I Am</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-divider"></div>
+    </div>
+
     <div class="about-wrapper">
-      <div class="about-left">
-        <h2>About Me</h2>
+      <!-- Left -->
+      <div class="about-left animate-left">
         <p>
-          I’m a dedicated Flutter developer with a strong interest in crafting seamless
-          mobile applications. My focus is on writing clean, maintainable code
-          and designing intuitive user interfaces.
+          I'm a dedicated Flutter developer with a strong passion for crafting seamless mobile applications.
+          My focus is on writing clean, maintainable code and designing intuitive, beautiful user interfaces
+          that users love.
         </p>
         <p>
-          I am a quick learner with a strong foundation in computer science fundamentals.
-          I am passionate about building high-quality software and continuously
-          expanding my knowledge in modern development practices.
+          I'm a quick learner with a solid foundation in computer science fundamentals, always keeping up
+          with modern development practices. I thrive in collaborative environments and love turning complex
+          challenges into elegant solutions.
         </p>
 
-        <div class="about-info" style="margin: 2.5rem 0;">
-          <div><strong>Location:</strong> Manamaiju, Kathmandu, Nepal</div>
-          <div><strong>Phone:</strong> +977 9860560525</div>
-          <div><strong>Email:</strong> swornikamhrjn@gmail.com</div>
+        <!-- Info card -->
+        <div class="about-info">
+          <div class="info-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <strong>Location</strong>
+            <span>Manamaiju, Kathmandu, Nepal</span>
+          </div>
+          <div class="info-row">
+            <i class="fa-solid fa-phone"></i>
+            <strong>Phone</strong>
+            <span>+977 9860560525</span>
+          </div>
+          <div class="info-row">
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Email</strong>
+            <span>swornikamhrjn@gmail.com</span>
+          </div>
         </div>
 
-        <!-- Education – moved to left column -->
-        <div class="education-section" style="margin-top: 3.5rem;">
-          <h3>Education</h3>
+        <!-- Education -->
+        <div class="education-section">
+          <h3><i class="fa-solid fa-graduation-cap" style="color: #c084fc; margin-right: 10px;"></i>Education</h3>
           <div class="edu-item">
             <div class="edu-degree">BSc. CSIT</div>
             <div class="edu-institution">Asian College of Higher Studies</div>
-            <div class="edu-location">Ekantakuna, Lalitpur</div>
-            <div class="edu-year">Completed</div>
+            <div class="edu-meta">
+              <span class="edu-location"><i class="fa-solid fa-location-pin" style="margin-right:5px;"></i>Ekantakuna,
+                Lalitpur</span>
+              <span class="edu-year">Completed</span>
+            </div>
           </div>
           <div class="edu-item">
             <div class="edu-degree">+2 Science</div>
             <div class="edu-institution">Kathmandu Model College</div>
-            <div class="edu-location">Bagbazaar, Kathmandu</div>
-            <div class="edu-year">Completed</div>
+            <div class="edu-meta">
+              <span class="edu-location"><i class="fa-solid fa-location-pin" style="margin-right:5px;"></i>Bagbazaar,
+                Kathmandu</span>
+              <span class="edu-year">Completed</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="about-right">
-        <h3>Core Skills</h3>
-        <div class="skills-list">
-          <div class="skill-row">
-            <div class="skill-name">Flutter</div>
-            <div class="skill-desc">Cross-platform mobile app development (primary expertise)</div>
+      <!-- Right -->
+      <div class="about-right animate-right">
+        <h3><i class="fa-solid fa-code" style="color: #c084fc; margin-right: 10px;"></i>Core Skills</h3>
+
+        <div class="skills-grid">
+          <!-- Featured / Primary -->
+          <div class="skill-card featured">
+            <div class="skill-icon">🦋</div>
+            <div>
+              <div class="skill-card-name">Flutter</div>
+              <div class="skill-card-desc">Cross-platform mobile app development — primary expertise</div>
+            </div>
           </div>
-          <div class="skill-row">
-            <div class="skill-name">Dart</div>
-            <div class="skill-desc">Language used for Flutter development</div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🎯</div>
+            <div class="skill-card-name">Dart</div>
+            <div class="skill-card-desc">Language powering Flutter</div>
           </div>
-          <div class="skill-row">
-            <div class="skill-name">HTML & CSS</div>
-            <div class="skill-desc">Responsive web design and UI styling</div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <div class="skill-card-name">HTML & CSS</div>
+            <div class="skill-card-desc">Responsive web design & styling</div>
           </div>
-          <div class="skill-row">
-            <div class="skill-name">Figma</div>
-            <div class="skill-desc">UI/UX design and prototyping</div>
+
+          <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <div class="skill-card-name">Figma</div>
+            <div class="skill-card-desc">UI/UX design & prototyping</div>
           </div>
-          <div class="skill-row">
-            <div class="skill-name">Trello</div>
-            <div class="skill-desc">Project management and task tracking</div>
+
+          <div class="skill-card">
+            <div class="skill-icon">📋</div>
+            <div class="skill-card-name">Trello</div>
+            <div class="skill-card-desc">Project management & task tracking</div>
           </div>
         </div>
 
-        <!-- Certifications – moved to right column -->
-        <div class="certifications-section" style="margin-top: 3.5rem;">
-          <h3>Certifications</h3>
+        <!-- Certifications -->
+        <div class="certifications-section" style="margin-top: 3rem;">
+          <h3><i class="fa-solid fa-certificate" style="color: #c084fc; margin-right: 10px;"></i>Certifications</h3>
           <div class="cert-item">
             <div class="cert-title">Web Designing Course</div>
             <div class="cert-institution">APTECH Information Technology</div>
-            <div class="cert-location">Kathmandu</div>
-            <div class="cert-year">2018</div>
+            <div class="edu-meta">
+              <span class="cert-location"><i class="fa-solid fa-location-pin"
+                  style="margin-right:5px;"></i>Kathmandu</span>
+              <span class="cert-year">2018</span>
+            </div>
             <div class="cert-description">
-              Completed a 3-month course from 10th April 2018 to 11th July 2018.
+              Completed a 3-month intensive course covering web design fundamentals (10 Apr – 11 Jul 2018).
             </div>
           </div>
         </div>
@@ -136,40 +223,72 @@
     </div>
   </section>
 
-  <section id="projects" class="projects-section animate-on-scroll">
-    <h2 class="section-title">My Projects</h2>
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="projects-section">
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">My Work</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-divider"></div>
+    </div>
 
     <!-- Personal Projects -->
-    <h3 class="project-category-title">Personal Projects</h3>
+    <div class="project-category-label animate-on-scroll">
+      <h3>Personal Projects</h3>
+    </div>
+
     <div class="projects-container">
 
       <div class="project-card animate-stagger" style="--delay: 0.1s">
+        <div class="project-no-img">🛒</div>
         <div class="project-info">
           <h3>Ecommerce Website</h3>
-          <p>Online electronics store with product listings, cart and checkout flow.</p>
+          <p>Online electronics store featuring product listings, shopping cart, and a complete checkout flow.</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">PHP</span>
+          </div>
           <div class="project-buttons">
-            <a href="https://onlineelectronics.infinityfreeapp.com/?i=1" target="_blank">Live Demo</a>
+            <a href="https://onlineelectronics.infinityfreeapp.com/?i=1" target="_blank" class="btn-primary-sm"
+              id="proj-ecommerce-demo">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
           </div>
         </div>
       </div>
 
       <div class="project-card animate-stagger" style="--delay: 0.25s">
+        <div class="project-no-img">🎵</div>
         <div class="project-info">
           <h3>Muse Vibe</h3>
-          <p>Music-focused mobile application built with Flutter.</p>
+          <p>Music-focused mobile application built with Flutter, featuring a clean and engaging UI.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+          </div>
           <div class="project-buttons">
-            <a href="https://github.com/swornika-maharjan/muse-vibe" target="_blank">GitHub</a>
+            <a href="https://github.com/swornika-maharjan/muse-vibe" target="_blank" class="btn-primary-sm"
+              id="proj-muse-github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
           </div>
         </div>
       </div>
 
       <div class="project-card animate-stagger" style="--delay: 0.4s">
+        <div class="project-no-img">⚛️</div>
         <div class="project-info">
           <h3>React Showcase</h3>
-          <p>Responsive React web project with modern components and routing.</p>
+          <p>Responsive React web project with modern components, routing, and dynamic UI patterns.</p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
           <div class="project-buttons">
-            <a href="https://github.com/swornika-maharjan/reactproject/tree/main/src/projects"
-              target="_blank">GitHub</a>
+            <a href="https://github.com/swornika-maharjan/reactproject/tree/main/src/projects" target="_blank"
+              class="btn-primary-sm" id="proj-react-github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
           </div>
         </div>
       </div>
@@ -177,146 +296,336 @@
     </div>
 
     <!-- Professional Contributions -->
-    <h3 class="project-category-title">Professional Contributions</h3>
-    <div class="projects-container">
-
-      <div class="project-card animate-stagger" style="--delay: 0.1s">
-        <div class="project-image">
-          <img src="e-shiksha.png" alt="e-Shiksha App" />
-        </div>
-        <div class="project-info">
-          <h3>e-Shiksha</h3>
-          <p>Contributed to feature development, UI improvements, and bug fixes in a learning platform.</p>
-          <div class="project-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.dallotech.eshiksha" target="_blank">Playstore</a>
-          </div>
-        </div>
+    <div class="project-section-gap">
+      <div class="project-category-label animate-on-scroll">
+        <h3>Professional Contributions</h3>
       </div>
 
-      <div class="project-card animate-stagger" style="--delay: 0.25s">
-        <div class="project-image">
-          <img src="jeevan_vigyan.png" alt="Jeevan Vigyan App" />
-        </div>
-        <div class="project-info">
-          <h3>Jeevan Vigyan</h3>
-          <p>Worked on enhancing features and improving app usability and performance.</p>
-          <div class="project-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.jeevanvigyan.mobileapp&pcampaignid=web_share"
-              target="_blank">Playstore</a>
+      <div class="projects-container">
+
+        <div class="project-card animate-stagger" style="--delay: 0.1s">
+          <div class="project-image">
+            <img src="e-shiksha.png" alt="e-Shiksha learning platform app" />
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-info">
+            <h3>e-Shiksha</h3>
+            <p>Contributed to feature development, UI improvements, and bug fixes in a digital learning platform.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://play.google.com/store/apps/details?id=com.dallotech.eshiksha" target="_blank"
+                class="btn-primary-sm" id="proj-eshiksha-play">
+                <i class="fa-brands fa-google-play"></i> Playstore
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-card animate-stagger" style="--delay: 0.4s">
-        <div class="project-image">
-          <img src="mcq_hall.png" alt="McqHALL App" />
-        </div>
-        <div class="project-info">
-          <h3>McqHALL</h3>
-          <p>Redesigned the application UI/UX to improve user experience and visual consistency.</p>
-          <div class="project-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.dallotech.mcqhall" target="_blank">Playstore</a>
+        <div class="project-card animate-stagger" style="--delay: 0.25s">
+          <div class="project-image">
+            <img src="jeevan_vigyan.png" alt="Jeevan Vigyan mobile app" />
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-info">
+            <h3>Jeevan Vigyan</h3>
+            <p>Enhanced app features, improved usability, and boosted performance for a better user experience.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://play.google.com/store/apps/details?id=com.jeevanvigyan.mobileapp&pcampaignid=web_share"
+                target="_blank" class="btn-primary-sm" id="proj-jeevan-play">
+                <i class="fa-brands fa-google-play"></i> Playstore
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-card animate-stagger" style="--delay: 0.55s">
-        <div class="project-image">
-          <img src="samiksha.png" alt="Samiksha Publication App" />
-        </div>
-        <div class="project-info">
-          <h3>Samiksha Publication</h3>
-          <p>Assisted in development by contributing to specific modules and collaborating with the team.</p>
-          <div class="project-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.samiksha.ecommerce" target="_blank">Playstore</a>
+        <div class="project-card animate-stagger" style="--delay: 0.4s">
+          <div class="project-image">
+            <img src="mcq_hall.png" alt="McqHALL quiz app" />
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-info">
+            <h3>McqHALL</h3>
+            <p>Led the full UI/UX redesign to improve visual consistency, accessibility, and user engagement.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Figma</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://play.google.com/store/apps/details?id=com.dallotech.mcqhall" target="_blank"
+                class="btn-primary-sm" id="proj-mcq-play">
+                <i class="fa-brands fa-google-play"></i> Playstore
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
+        <div class="project-card animate-stagger" style="--delay: 0.55s">
+          <div class="project-image">
+            <img src="samiksha.png" alt="Samiksha Publication app" />
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-info">
+            <h3>Samiksha Publication</h3>
+            <p>Collaborated with the team on specific modules, contributing to feature development and app delivery.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://play.google.com/store/apps/details?id=com.samiksha.ecommerce" target="_blank"
+                class="btn-primary-sm" id="proj-samiksha-play">
+                <i class="fa-brands fa-google-play"></i> Playstore
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <section id="contacts" class="contact-section animate-on-scroll">
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contacts" class="contact-section">
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Let's Work Together</h2>
+      <div class="section-divider"></div>
+    </div>
+
     <div class="contact-wrapper">
-      <div class="contact-left">
-        <h2>Let's Work Together</h2>
+      <div class="contact-left animate-left">
+        <h2>Say Hello! 👋</h2>
         <p>
-          I'm always open to discussing new projects, creative ideas,<br>
-          or opportunities to collaborate. Feel free to reach out!
+          I'm always open to discussing new projects, creative ideas, or opportunities to collaborate.
+          Whether you have a project in mind or just want to connect — feel free to reach out!
         </p>
 
         <div class="contact-info">
-          <p><i class="fas fa-envelope"></i> swornikamhrjn@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +977 9860560525</p>
-          <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+          <div class="contact-info-item">
+            <div class="icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info-text">
+              <span class="info-label">Email</span>
+              <span class="info-value">swornikamhrjn@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-wrap"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-text">
+              <span class="info-label">Phone</span>
+              <span class="info-value">+977 9860560525</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-text">
+              <span class="info-label">Location</span>
+              <span class="info-value">Kathmandu, Nepal</span>
+            </div>
+          </div>
         </div>
 
         <div class="social-links">
-          <a href="https://github.com/swornika-maharjan" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-github"></i>
+          <a href="https://github.com/swornika-maharjan" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub Profile" id="social-github">
+            <i class="fa-brands fa-github"></i>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-linkedin"></i>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" id="social-linkedin">
+            <i class="fa-brands fa-linkedin-in"></i>
           </a>
         </div>
       </div>
 
-      <div class="contact-right">
-        <form>
-          <input type="text" name="user_name" placeholder="Your Name" required>
-          <input type="email" name="user_email" placeholder="Your Email" required>
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
+      <div class="contact-right animate-right">
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="user_name">Your Name</label>
+            <input type="text" id="user_name" name="user_name" placeholder="e.g. Jane Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="user_email">Your Email</label>
+            <input type="email" id="user_email" name="user_email" placeholder="e.g. jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or just say hi!"
+              required></textarea>
+          </div>
+          <button type="submit" id="btn-send-message">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p>Crafted with <span>♥</span> by <span>Swornika Maharjan</span> &nbsp;·&nbsp; Flutter Developer</p>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <script>
+    /* ============================================================
+       EmailJS Init
+    ============================================================ */
     (function () {
       emailjs.init("4SsVt63njqlm3srW2");
     })();
 
-    document.querySelector("form").addEventListener("submit", function (e) {
+    /* ============================================================
+       Toast Helper
+    ============================================================ */
+    function showToast(msg, type = 'success') {
+      const toast = document.getElementById('toast');
+      const icon = type === 'success' ? '✅' : '❌';
+      toast.textContent = `${icon}  ${msg}`;
+      toast.className = `toast ${type} show`;
+      setTimeout(() => { toast.classList.remove('show'); }, 4000);
+    }
+
+    /* ============================================================
+       Contact Form
+    ============================================================ */
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
       e.preventDefault();
+      const btn = document.getElementById('btn-send-message');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
 
       emailjs.sendForm("service_60x2ut9", "template_y8n09vl", this)
-        .then(function () {
-          alert("Message sent successfully!");
-        }, function (error) {
-          alert("Failed to send message. Try again.");
+        .then(() => {
+          showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
+          this.reset();
+        }, () => {
+          showToast('Failed to send message. Please try again.', 'error');
+        })
+        .finally(() => {
+          btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+          btn.disabled = false;
         });
-
-      this.reset();
     });
-  </script>
 
-  <script>
-    // Scroll reveal animations
-    const revealElements = document.querySelectorAll('.animate-on-scroll, .animate-stagger');
+    /* ============================================================
+       Scroll Progress Bar
+    ============================================================ */
+    const progressBar = document.getElementById('progress-bar');
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
 
-    const reveal = () => {
-      revealElements.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const elementVisible = 140;
-
-        if (elementTop < windowHeight - elementVisible) {
-          el.classList.add('visible');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', reveal);
-    reveal(); // run once on load
-
-    // Header scroll effect
-    const header = document.querySelector('.header');
+    /* ============================================================
+       Header Scroll Effect
+    ============================================================ */
+    const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 80);
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ============================================================
+       Active Nav Link on Scroll
+    ============================================================ */
+    const sections = document.querySelectorAll('main, section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function updateActiveNav() {
+      let current = '';
+      sections.forEach(sec => {
+        const sectionTop = sec.offsetTop - 120;
+        if (window.scrollY >= sectionTop) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    }
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+    /* ============================================================
+       Hamburger Menu
+    ============================================================ */
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('main-nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mainNav.classList.toggle('open');
     });
+
+    // Close nav on link click
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mainNav.classList.remove('open');
+      });
+    });
+
+    /* ============================================================
+       Scroll Reveal
+    ============================================================ */
+    const revealEls = document.querySelectorAll(
+      '.animate-on-scroll, .animate-stagger, .animate-left, .animate-right'
+    );
+
+    function reveal() {
+      revealEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) el.classList.add('visible');
+      });
+    }
+
+    window.addEventListener('scroll', reveal, { passive: true });
+    reveal();
+
+    /* ============================================================
+       Typewriter Effect
+    ============================================================ */
+    const roles = ['Flutter Developer', 'Mobile App Engineer', 'UI/UX Enthusiast', 'Dart Specialist'];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    const typeEl = document.getElementById('typewriter');
+
+    function type() {
+      const current = roles[roleIdx];
+      if (isDeleting) {
+        typeEl.textContent = current.substring(0, charIdx - 1);
+        charIdx--;
+      } else {
+        typeEl.textContent = current.substring(0, charIdx + 1);
+        charIdx++;
+      }
+
+      if (!isDeleting && charIdx === current.length) {
+        setTimeout(() => { isDeleting = true; type(); }, 2200);
+        return;
+      }
+
+      if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        roleIdx = (roleIdx + 1) % roles.length;
+      }
+
+      const speed = isDeleting ? 60 : 95;
+      setTimeout(type, speed);
+    }
+
+    setTimeout(type, 1200);
   </script>
 
 </body>
